@@ -1,10 +1,10 @@
-#Simple To-Do List Webpage
+# Simple To-Do List Webpage
 
-##Description
+## Description
 
 This is a simple to-do list web application built with plain HTML, CSS, and JavaScript. It allows users to add, remove, and mark tasks as completed, with persistence across sessions using the browser's localStorage.
 
-##Features
+## Features
 
 **Add tasks**: Quickly add new to-do items.
 
@@ -14,7 +14,7 @@ This is a simple to-do list web application built with plain HTML, CSS, and Java
 
 **Persistent storage**: Tasks are saved in localStorage and persist across page reloads.
 
-##Technologies Used
+## Technologies Used
 
 HTML5 for structure
 
