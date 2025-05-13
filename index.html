@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-do list</title>
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,19 +14,17 @@
 <body>
     <div class="app-container">
         <header id="head">
-            <h1>To-do list</h1>
+            <h1><img src="/images/favicon.png" alt="">Reminders</h1>
         </header>
     
         <main id="list">
             <div class="input-container">
                 <input type="text" name="task" id="task" placeholder="Enter your text">
-                <button type="submit">add</button>
+                <button onclick="addTask()">add</button>
             </div>
     
-            <ul>
-                <li class="checked">Item 1</li>
-                <li >Item 2</li>
-                <li >Item 3</li>
+            <ul id="list-container">
+                <!-- event target -->
             </ul>
         </main>
 
