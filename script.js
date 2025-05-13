@@ -1,6 +1,7 @@
 const task = document.getElementById("task");
 const listContainer = document.getElementById("list-container");
 
+//Create new li elements and append them to DOM
 const addTask = () => {
     if(task.value === '') {
         alert("Upss, you must write something!");
@@ -17,6 +18,8 @@ const addTask = () => {
     task.value = "";
 }
 
+
+//Create li elements event
 listContainer.onclick = e => {
     if(e.target.tagName === "LI") {
         e.target.classList.toggle("checked");
@@ -24,5 +27,12 @@ listContainer.onclick = e => {
 
     else if(e.target.tagName === "SPAN") {
         e.target.parentElement.remove();
+    }
+}
+
+//Press enter to submit new tasks event 
+window.onkeydown = e => {
+    if (e.key === "Enter") {
+        addTask();
     }
 }
