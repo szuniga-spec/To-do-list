@@ -16,6 +16,7 @@ const addTask = () => {
     }
 
     task.value = "";
+    saveData();
 }
 
 
@@ -23,10 +24,12 @@ const addTask = () => {
 listContainer.onclick = e => {
     if(e.target.tagName === "LI") {
         e.target.classList.toggle("checked");
+        saveData();
     }
 
     else if(e.target.tagName === "SPAN") {
         e.target.parentElement.remove();
+        saveData();
     }
 }
 
@@ -36,3 +39,17 @@ window.onkeydown = e => {
         addTask();
     }
 }
+
+//Store tasks on the Browser's Local Storage
+
+const saveData = () => {
+    localStorage.setItem("data", listContainer.innerHTML);
+}
+
+//Retrieve saved data from the Browser's Local Storage
+
+const showData = () => {
+    listContainer.innerHTML = localStorage.getItem("data");
+}
+
+showData();
